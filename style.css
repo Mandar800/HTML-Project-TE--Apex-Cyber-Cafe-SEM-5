@@ -33,14 +33,9 @@ body {
 }
 .bg {
   background: url(bg.jpg) no-repeat center center fixed;
+  position: relative;
 }
-.centered {
-  position: absolute;
-  display: inline;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 .img { display: absolute; width: 100%; filter: blur(2px);margin-top:0%; }
 .login {
 	margin-top: 1%;
@@ -73,7 +68,7 @@ body {
   text-decoration: none;
   color: #74b9ff
 }
-.box input[type="text"],.box input[type="password"]{
+.box input[type="text"],.box input[type="password"],.box input[type="email"],.box input[type="tel"]{
   border:0;
   font-family: Montserrat;
   background: none;
@@ -105,4 +100,26 @@ body {
 }
 .box input[type="submit"]:hover{
   background: #55efc4;
+}
+.centered {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.mainhead{
+  font-size:75px;
+  color:white;
+  font-weight: 800;
+  font-family:Montserrat;
+}
+.mainhead2{
+  font-size:15px;
+  color:white;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: light;
+
+  font-family:Montserrat;
 }
