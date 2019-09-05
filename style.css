@@ -42,7 +42,7 @@ body {
 }
 .box {
   width: 300px;
-  padding: 40px;
+  padding: 20px;
   position: absolute;
   top: 50%;
   left:50%;
@@ -73,7 +73,7 @@ body {
   font-family: Montserrat;
   background: none;
   display: block;
-  margin: 20px auto;
+  margin: 10px auto;
   text-align: center;
   border : 2px solid #00cec9;
   padding:14px 10px;
@@ -108,18 +108,53 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+.box input[type="text"]:focus,.box input[type="password"]:focus,.box input[type="email"]:focus,.box input[type="tel"]:focus{
+  width: 280px;
+  border-color: #a29bfe;
+}
 .mainhead{
   font-size:75px;
   color:white;
   font-weight: 800;
+  margin-bottom: 5%;
   font-family:Montserrat;
 }
 .mainhead2{
   font-size:15px;
   color:white;
   text-transform: uppercase;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
+  word-spacing: 10px;
   font-weight: light;
 
   font-family:Montserrat;
+}
+.features{
+  background-color: #2b2b2b;
+  font-family: Montserrat;
+
+
+}
+.features h1{
+
+  margin-left: 5%;
+  margin-top: 8%;
+  color: #74b9ff;
+  font-size:75px;
+  font-weight: 800;
+  margin-bottom:10px;
+}
+.features p{
+  margin-left: 5%;
+  margin-right:30%
+  margin-top: 0%;
+  color: #74b9ff;
+
+}
+.features img{
+  margin: 5%;
+  margin-right: 5%;
+  width:300px;
+  height:300px;
+
 }
