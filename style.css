@@ -40,7 +40,7 @@ body {
   display: absolute;
    width: 100%;
     filter: blur(2px);
-    margin-top:-0%;
+  margin: -5px -10px -10px -0px;
  }
 .login {
 	margin-top: 1%;
@@ -180,6 +180,7 @@ body {
   margin-left: 5%;
   margin-right:10%;
   margin-top: 0%;
+  font-weight: 400px;
   color: #2b2b2b;
 
 }
@@ -233,4 +234,38 @@ body {
 }
 #copy{
   padding:10px;
+}
+.CS img{
+  width:auto;
+  height:110%;
+  margin-top: 10%;
+  margin-left: 0%;
+}
+.CS h1{
+  font-size: 80px;
+  color: #2b2b2b;
+  margin-top: 50%;
+  margin-left: 15%;
+  margin-bottom: 5%;
+}
+.CS p{
+  color: #2b2b2b;
+  font-size: 20px;
+  margin-left: 15%;
+  margin-top: 0%;
+}
+.spec{
+  width:100%;
+  overflow:hidden;
+  color:#2b2b2b;
+}
+.spec p{
+  text-align:center;
+  margin:0%;
+  margin-bottom: 5%;
+}
+.spec h1{
+  text-align:center;
+  margin:0%;
+  margin-bottom: 5%;
 }
