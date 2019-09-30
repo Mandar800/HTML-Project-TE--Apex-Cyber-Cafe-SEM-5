@@ -74,7 +74,7 @@ body {
   text-decoration: none;
   color: #74b9ff
 }
-.box input[type="text"],.box input[type="password"],.box input[type="email"],.box input[type="tel"]{
+.box input[type="text"],.box input[type="password"],.box input[type="email"],.box input[type="tel"],.box select,.box input[type="date"],.box input[type="time"],.box input[type="number"]{
   border:0;
   font-family: Montserrat;
   background: none;
