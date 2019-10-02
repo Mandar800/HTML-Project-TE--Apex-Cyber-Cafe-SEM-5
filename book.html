@@ -12,21 +12,36 @@ rel='stylesheet' type='text/css'>
   <a href="cs.html">Specifications</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact Us</a>
-  <a style="float:right" href="login.html">Login</a>
+  <a style="float:right" href="login.html">Book Now</a>
 </div>
 <form class="box" action="loginnow.html" method="post">
   <h1>Book a Seat</h1>
-  <select name="Specs" >
+  <select name="Specs" required>
   <option style="color:black;" value="pc">Normal PC</option>
   <option style="color:black;" value="gpc">Gaming PC</option>
   <option style="color:black;" value="vr">Gaming PC with VR</option>
   <option style="color:black;" value="xbox">Xbox One X</option>
   <option style="color:black;" value="ps">Playstation 4 Pro</option>
 </select>
-<input type="date" name="date" value="date">
-<input type="time" name="time" value="time">
-<input type="number" name="dur" value="dur" placeholder="Duration in Hr's">
-<input type="submit" name="" value="Book Now">
+<input type="date" name="date" value="date" data-date-split-input="true">
+<select name="time" required>
+  <option style="color:black;" value="0">Select Time</option>
+<option style="color:black;" value="9 AM">9 AM</option>
+<option style="color:black;" value="10 AM">10 AM</option>
+<option style="color:black;" value="11 AM">11 AM</option>
+<option style="color:black;" value="12 AM">12 AM</option>
+<option style="color:black;" value="1 PM">1 PM</option>
+<option style="color:black;" value="2 PM">2 PM</option>
+<option style="color:black;" value="3 PM">3 PM</option>
+<option style="color:black;" value="4 PM">4 PM</option>
+<option style="color:black;" value="5 PM">5 PM</option>
+<option style="color:black;" value="6 PM">6 PM</option>
+<option style="color:black;" value="7 PM">7 PM</option>
+<option style="color:black;" value="8 PM">8 PM</option>
+<option style="color:black;" value="9 PM">9 PM</option>
+</select>
+<input type="number" name="dur" value="dur" placeholder="Duration in Hr's" required>
+<input type="submit" name="Book" value="Book Now">
 </form>
 
 

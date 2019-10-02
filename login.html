@@ -12,65 +12,15 @@ rel='stylesheet' type='text/css'>
   <a href="cs.html">Specifications</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact Us</a>
-  <a style="float:right" href="login.html">Login</a>
+  <a style="float:right" href="login.html">Book Now</a>
 </div>
-<form class="box" action="book.html" method="post">
+<form class="box" action="login.php" method="post">
   <h1>Login</h1>
-  <input type="text" placeholder="Username">
-  <input type="password" name="" placeholder="Password">
+  <input type="text" name="un" placeholder="Username" required>
+  <input type="password" name="pass" placeholder="Password" required>
   <input type="submit" name="" value="Log in">
   <h5>Don't have Account? <a href="signup.html">Sign up</a></h5>
 </form>
-<script>
-function register() {
-// alert('hi');
-
-var username = $('#username').val().trim(),
-password = $('#password').val().trim(),
-email_id = $('#email_id').val().trim(),
-    mobile_no = $('#mobile_no').val().trim();
-
-
-if (username && password && email_id && mobile_no) {
-
-  var formdata = new FormData();
-
-  formdata.append('username', username);
-  formdata.append('password', password);
-  formdata.append('email_id', email_id);
-  formdata.append('mobile_no', mobile_no);
-  console.log(formdata);
-
-$.ajax({
-
-type: "POST",
-url: 'http://localhost/Aditi/customer_account.php',
-data: formdata,
-success: function(data) {
-// console.log('done');
-alert('Registered');
-window.location.reload();
-// setData('user', JSON.stringify(data));
-// Nav.assign('home.html')
-},
-error: function(error) {
-console.log(error);
-},
-   dataType: 'json',
-   processData: false,
-   contentType: false
-});
-
-} else {
-alert('Please enter all the fields');
-}
-
-};
-
-</script>
-
-
 </div>
-
 </body>
 </html>

@@ -4,6 +4,26 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href='https://fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800'
 rel='stylesheet' type='text/css'>
+<script>
+
+            // Function to check Whether both passwords
+            // is same or not.
+            function checkPassword(form) {
+                password1 = form.pass.value;
+                password2 = form.pass1.value;
+
+                 if (password1 != password2) {
+                    alert ("\nPassword did not match: Please Enter Same Password In Confirm Password!")
+                    return false;
+                }
+
+                // If same return True.
+                else{
+
+                    return true;
+                }
+            }
+        </script>
 </head>
 <body bgcolor="#333">
 
@@ -12,15 +32,15 @@ rel='stylesheet' type='text/css'>
   <a href="cs.html">Computer Specs</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact Us</a>
-  <a style="float:right" href="login.html">Login</a>
+  <a style="float:right" href="login.html">Book Now</a>
 </div>
-<form class="box" action="insert.php" method="post">
+<form class="box" action="insert.php" onSubmit = "return checkPassword(this)" method="post">
   <h1>Sign Up</h1>
-  <input type="text" placeholder="Username" name="un">
-  <input type="email" placeholder="E-Mail" name="email">
-  <input type="tel" placeholder="Phone No." name="tel">
-  <input type="password" name="pass" placeholder="Password">
-  <input type="password" name="pass1" placeholder="Confirm Password">
+  <input type="text" placeholder="Username" name="un" required>
+  <input type="email" placeholder="E-Mail" name="email" required>
+  <input type="tel" placeholder="Phone No." name="tel" required>
+  <input type="password" name="pass" placeholder="Password" required>
+  <input type="password" name="pass1" placeholder="Confirm Password" required>
   <input type="submit" name="" value="Sign up">
   <h5>Already have an Account? <a href="login.html">Sign in</a></h5>
 </form>
