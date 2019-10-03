@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 * {
   padding: 0;
-  margin: 0; 
+  margin: 0;
   box-sizing: border-box;
  }
  body {
@@ -13,6 +13,10 @@
   overflow: hidden;
   z-index: 1;
 }
+.topnav .icon {
+  display: none;
+}
+
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -39,10 +43,10 @@
 }
 
 .cssa {
-position:fixed; 
-top:140px; 
-right:0px; 
-z-index:99999; 
+position:fixed;
+top:140px;
+right:0px;
+z-index:99999;
 }
 
 
@@ -163,11 +167,11 @@ z-index:99999;
 }
 
 .correo i{
-  margin-right: 1em; 
+  margin-right: 1em;
 }
 
 .tel i{
-  margin-right: 1em; 
+  margin-right: 1em;
 }
 
 .hireClick{
@@ -491,21 +495,21 @@ p{
 }
 
 @media screen and (max-width: 1000px) {
-  
+
   .square{
     width: 100%;
   }
-  
+
   .squareTitle{
     margin-left: 0;
     padding: .5em;
   }
-  
+
   .squareTitleRight{
     margin-right: 0;
     padding: .5em;
   }
-  
+
   .squareImage{
     width: 100%;
   }
@@ -516,7 +520,7 @@ p{
     margin:auto;
     display:block;
   }
-  
+
   .hire{
     width: 100%;
     text-align: center;
@@ -526,15 +530,15 @@ p{
     right: 0;
     border-radius: 0;
   }
-  
+
   .habilidad{
     width: 70%;
   }
-  
+
   .progress{
     font-size: calc(0.95em + 1.4vmin);
   }
-  
+
   .hireClick{
     top: 0;
     left: 0;

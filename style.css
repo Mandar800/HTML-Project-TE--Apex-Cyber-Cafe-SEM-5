@@ -388,7 +388,11 @@ body {
     line-height:2;
   }
   .featuresd img{
-    margin-left: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
   }
   .featuresw h1{
     font-size: 40px;
@@ -402,7 +406,11 @@ body {
     line-height:2;
   }
   .featuresw img{
-    margin-left: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
   }
   .featuresw h3{
     margin-left: 30px;
@@ -448,16 +456,22 @@ body {
     width: 100%;
   }
   .div-l50 img{
-    width: 400px;
-    height: 375px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200%;
+    height: auto;
   }
   .div-r50 h1{
     font-size: 50px;
     margin-top: 10px;
   }
   .div-r50 img{
-    width: 400px;
-    height: 225px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
   }
   .div-l50 h1{
     font-size: 50px;
