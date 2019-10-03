@@ -111,19 +111,24 @@ body {
 .box input[type="submit"]:hover{
   background: #55efc4;
 }
+.container{
+  position: relative;
+  text-align: center;
+  color: white;
+}
 .centered {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+
 }
 .box input[type="text"]:focus,.box input[type="password"]:focus,.box input[type="email"]:focus,.box input[type="tel"]:focus{
   width: 280px;
   border-color: #a29bfe;
 }
 .mainhead{
-  font-size:75px;
+  font-size:5vw;
   color:white;
   font-weight: 800;
   margin-bottom: 5%;
@@ -131,14 +136,13 @@ body {
   z-index: -1;
 }
 .mainhead2{
-  font-size:15px;
+  font-size:2vw;
   color:white;
   text-transform: uppercase;
   letter-spacing: 5px;
   word-spacing: 10px;
   font-weight: light;
   z-index: -1;
-
   font-family:Montserrat;
 }
 .featuresd{
@@ -368,11 +372,9 @@ body {
     margin: -10px -50px -10px -80px;
   }
   .mainhead{
-    font-size: 40px;
+    font-size: 7vw;
   }
-  .centered{
-    top:30%;
-  }
+
   [class*="wid-"] {
     width: 100%;
   }
