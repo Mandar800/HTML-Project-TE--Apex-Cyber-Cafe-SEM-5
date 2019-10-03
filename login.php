@@ -1,7 +1,8 @@
 <?php
+session_start();
 $UN = $_POST['un'];
 $PASS = $_POST['pass'];
-session_start();
+
 $host = "localhost";
 $dbUsername = "root";
 $dbPassword = "";

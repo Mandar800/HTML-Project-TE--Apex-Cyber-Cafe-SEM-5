@@ -12,14 +12,27 @@ rel='stylesheet' type='text/css'>
     var hr=document.getElementById("dur").value;
     var e = document.getElementById("Time");
     var strUser = e.options[e.selectedIndex].value;
-    if (hr<0) {
+    var date = document.getElementById("date").value;
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var t = String(today.getHours());
+    var yyyy = today.getFullYear();
+    today = yyyy+'-'+mm+'-'+dd;
+
+    if (hr<1) {
       alert("Duration is Invalid");
       return false;
     }
     if (strUser==0) {
-      alert("please select time");
+      alert("Please select Time");
       return false;
     }
+    if (date<today ||( date==today && strUser<t )) {
+        alert("Invalid Date or Time");
+        return false;
+    }
+
   }
 </script>
 <body bgcolor="#333" onload="load()">
@@ -42,9 +55,9 @@ rel='stylesheet' type='text/css'>
   <option style="color:black;" value="xbox">Xbox One X</option>
   <option style="color:black;" value="ps">Playstation 4 Pro</option>
 </select>
-<input type="date" name="date" value="" >
+<input type="date" id="date" name="date" value="" >
 <select name="time" id="Time" required>
-  <option style="color:black;" value="0">Select Time</option>
+<option style="color:black;" value="0">Select Time</option>
 <option style="color:black;" value="9">9 AM</option>
 <option style="color:black;" value="10">10 AM</option>
 <option style="color:black;" value="11">11 AM</option>
