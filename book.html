@@ -7,8 +7,22 @@ rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="myScript.js"></script>
 </head>
-<body bgcolor="#333">
-
+<script type="text/javascript">
+  function checkBook(form){
+    var hr=document.getElementById("dur").value;
+    var e = document.getElementById("Time");
+    var strUser = e.options[e.selectedIndex].value;
+    if (hr<0) {
+      alert("Duration is Invalid");
+      return false;
+    }
+    if (strUser==0) {
+      alert("please select time");
+      return false;
+    }
+  }
+</script>
+<body bgcolor="#333" onload="load()">
 <div class="topnav" id="myTopnav">
    <a href="mywebsite.html">Apex Cyber</a>
   <a href="cs.html">Specifications</a>
@@ -19,7 +33,7 @@ rel='stylesheet' type='text/css'>
 <i class="fa fa-bars"></i>
 </a>
 </div>
-<form class="box" action="loginnow.html" method="post">
+<form class="box" action="Book.php" onSubmit = "return checkBook(this)" method="post">
   <h1>Book a Seat</h1>
   <select name="Specs" required>
   <option style="color:black;" value="pc">Normal PC</option>
@@ -28,24 +42,24 @@ rel='stylesheet' type='text/css'>
   <option style="color:black;" value="xbox">Xbox One X</option>
   <option style="color:black;" value="ps">Playstation 4 Pro</option>
 </select>
-<input type="date" name="date" value="date" data-date-split-input="true">
-<select name="time" required>
+<input type="date" name="date" value="" >
+<select name="time" id="Time" required>
   <option style="color:black;" value="0">Select Time</option>
-<option style="color:black;" value="9 AM">9 AM</option>
-<option style="color:black;" value="10 AM">10 AM</option>
-<option style="color:black;" value="11 AM">11 AM</option>
-<option style="color:black;" value="12 AM">12 AM</option>
-<option style="color:black;" value="1 PM">1 PM</option>
-<option style="color:black;" value="2 PM">2 PM</option>
-<option style="color:black;" value="3 PM">3 PM</option>
-<option style="color:black;" value="4 PM">4 PM</option>
-<option style="color:black;" value="5 PM">5 PM</option>
-<option style="color:black;" value="6 PM">6 PM</option>
-<option style="color:black;" value="7 PM">7 PM</option>
-<option style="color:black;" value="8 PM">8 PM</option>
-<option style="color:black;" value="9 PM">9 PM</option>
+<option style="color:black;" value="9">9 AM</option>
+<option style="color:black;" value="10">10 AM</option>
+<option style="color:black;" value="11">11 AM</option>
+<option style="color:black;" value="12">12 AM</option>
+<option style="color:black;" value="13">1 PM</option>
+<option style="color:black;" value="14">2 PM</option>
+<option style="color:black;" value="15">3 PM</option>
+<option style="color:black;" value="16">4 PM</option>
+<option style="color:black;" value="17">5 PM</option>
+<option style="color:black;" value="18">6 PM</option>
+<option style="color:black;" value="19">7 PM</option>
+<option style="color:black;" value="20">8 PM</option>
+<option style="color:black;" value="21">9 PM</option>
 </select>
-<input type="number" name="dur" value="dur" placeholder="Duration in Hr's" required>
+<input type="number" id="dur" name="dur" value="dur" placeholder="Duration in Hr's" required>
 <input type="submit" name="Book" value="Book Now">
 </form>
 

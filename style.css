@@ -43,7 +43,7 @@ body {
   display: absolute;
    width: 100%;
     filter: blur(2px);
-  margin: -5px -10px -10px -0px;
+  margin: -5px -15px -10px -15px;
   z-index: -1;
  }
 .login {
