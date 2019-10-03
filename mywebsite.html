@@ -4,15 +4,21 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href='https://fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800'
 rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="myScript.js"></script>
+
 </head>
 <body>
   <nav>
-    <div class="topnav" id="nav">
+    <div class="topnav" id="myTopnav">
       <a class="active" href="mywebsite.html">Apex Cyber</a>
       <a href="cs.html">Specifications</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact Us</a>
       <a style="float:right" href="login.html">Book Now</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
     </div>
   </section>
   <section>
@@ -28,21 +34,21 @@ rel='stylesheet' type='text/css'>
 <!-------xxxxxxx----->
 <section class="featuresd">
 <div id = "container" style = "width:100%;">
-    <div id ="left" style = "float:left; width: 75%;">
+    <div class="wid-l75" >
       <h1 >High Speed Internet </h1>
       <p>Lightning Fast<b style="color:#FC6220"><i> 50 Mbps</i></b> Speed! Enjoy the freedom of endless possibilities Download any songs you like, play your favourite games, attach large files or folders, upload your trendy photos & videos; its simple & easy with Apex Cyber Cafe. </p>
     </div>
-    <div id = "right" style = "float:left; width: 25%;">
+    <div class="wid-l25">
           <img src="speedicon.png" alt="speedicon">
     </div>
 </div>
 </section>
 <section class="featuresw">
 <div id = "container" style = "width:100%">
-    <div id ="left" style = "float:left; width: 25%;">
+    <div class="wid-l25">
         <img src="pc.png" alt="pc">
     </div>
-    <div id = "right" style = "float:left; width: 75%;">
+    <div class="wid-l75">
       <h1 >High Performance Pc's</h1>
       <p>Experience a new level of performance with an award-winning <b style="color:#FF7B05">Digital Storm PC</b>. Built with the latest technology, highest Quality Intel and Nvidia Components. <a href="cs.html" style="text-decoration: none;color:blue;">Learn More</a></p>
 
@@ -51,11 +57,11 @@ rel='stylesheet' type='text/css'>
 </section>
 <section class="featuresd">
 <div id = "container" style = "width:100%;">
-    <div id ="left" style = "float:left; width: 75%;">
+    <div class="wid-l75">
       <h1 >Game Like a Champion</h1>
       <p>Whether gaming with a few close friends or a network of dozens, Our machines give teams the edge they need to unite and take down any enemy. We provide you all Lastest Gaming Platforms Like <b style="color:#74b9ff"> Windows</b>,<b  style="color:#7A6CF7"> Playstation</b>, <b  style="color:#49BC6E">Xbox </b> and<b  style="color:#F45735"> Nintendo.</b></p>
     </div>
-    <div id = "right" style = "float:left; width: 25%;">
+    <div class="wid-l25">
           <img src="xbox.png" alt="speedicon">
     </div>
 </div>
@@ -81,5 +87,6 @@ rel='stylesheet' type='text/css'>
   <div style="width:100%;border-top:5px solid #74b9ff">
     <p id="copy" align="center">© Copyright<b> ApexCyber</b>. All Rights Reserved</p>
 </section>
+
 </body>
 </html>

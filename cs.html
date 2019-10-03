@@ -4,82 +4,93 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href='https://fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800'
 rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="myScript.js"></script>
 </head>
 <body bgcolor="#fff">
 
-<div class="topnav">
-   <a class="active" href="mywebsite.html">Apex Cyber</a>
-  <a href="cs.html">Specifications</a>
+<div class="topnav" id="myTopnav">
+   <a  href="mywebsite.html">Apex Cyber</a>
+  <a class="active" href="cs.html">Specifications</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact Us</a>
   <a style="float:right" href="login.html">Book Now</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+<i class="fa fa-bars"></i>
+</a>
 </div>
 
 <div class="CS" >
-  <div class="" style="float:left;width:40%;">
-    <h1 class="cst">Digital Storm Pc's</h1>
+  <div class="cs-l" >
+    <h1 class="">Digital Storm Pc's</h1>
     <p>Experience Lightning Fast Speed Wiht Our Digital Storm Pc, Get Your Work Done Within Seconds.Experience the latest new games in maximum detail and high frame rates, It delivers an entirely new level of immersion.</p>
 
   </div>
-  <div class="" style="float:right;width:60%;">
+  <div class="cs-r">
     <img class="PC" src="pc.jpg" alt="PC" >
   </div>
 
 </div>
 <div class="spec">
-  <div style="width:20%;float:left;">
+  <div class="s-20">
 <p>Processor</p>
 <h1>8-Core</h1>
 <p>Intel i9 7200U</p>
   </div>
-  <div style="width:20%;float:left;">
+  <div class="s-20">
 <p>RAM</p>
 <h1>16 GB</h1>
 <p>HyperX DDR-5</p>
   </div>
-  <div style="width:20%;float:left;">
+  <div class="s-20">
 <p>GPU</p>
 <h1>2080 Ti</h1>
 <p>Nvidia GeForce</p>
   </div>
-  <div style="width:20%;float:left;">
+  <div class="s-20">
 <p>Display</p>
 <h1>244 Hz RR</h1>
 <p>LG Ultragear-4K</p>
   </div>
-  <div style="width:20%;float:left;">
+  <div class="vr">
 <p>VR Ready</p>
 <h1>VR Gaming</h1>
 <p>Oculus Quest VR</p>
   </div>
 </div>
-<div class="" style="background:#2b2b2b;">
-  <h1 style="margin-top:10%;margin-bottom:10%;text-align:center;font-size:100px;color:white;padding:5%">Consoles Available!</h1>
+<div class="" style="  background:#2b2b2b;">
+  <h1 class="con">Consoles Available!</h1>
+</div>
+
+
+
+<div class=""style="  width:100%;overflow:hidden;">
+  <div class="div-l50" style="width:50%;float:left;">
+    <img src="ps.png" alt="ps" >
+  </div>
+  <div class="div-r50" >
+      <h1 >Playstation 4 Pro</h1>
+  </div>
 </div>
 <div class=""style="  width:100%;overflow:hidden;">
-  <div class="" style="width:50%;float:left;">
-    <img src="ps.png" alt="xbox" style="width:100%;height:100%;">
+  <div class="div-l50">
+    <h1 >Xbox One X</h1>
   </div>
-  <div class="" style="width:50%;float:right;">
-      <h1 style="text-align:center;font-size:100px;color:#2b2b2b;margin-top:40%;">Playstation 4 Pro</h1>
-  </div>
-</div>
-<div class=""style="  width:100%;overflow:hidden;">
-  <div class="" style="width:50%;float:left;">
-    <h1 style="text-align:center;font-size:100px;color:#2b2b2b;margin-top:20%;">Xbox One X</h1>
-  </div>
-  <div class="" style="width:50%;float:right;">
+  <div class="div-r50">
       <img src="xbox.jpg" alt="xbox" style="">
   </div>
 </div>
-<div class=""style="  width:100%;overflow:hidden;">
-  <div class="" style="width:50%;float:left;margin-bottom:05%;margin-top:5%;">
-    <img src="games.jpg" alt="games" style="width:100%;height:90%;">
+<div class=""  style="  width:100%;overflow:hidden;">
+  <div class="game" >
+    <img id="gamepic" src="games.jpg" alt="games">
   </div>
-  <div class="" style="width:50%;float:right;">
-      <h1 style="text-align:center;font-size:100px;color:#2b2b2b;margin-top:35%;">Game Ready Machines</h1>
+  <div class="gamet" >
+      <h1 >Game Ready Machines</h1>
   </div>
 </div>
+
+
+
 <section class="featuresw">
 <div id = "container" style = "width:100%;border-top:5px solid #74b9ff;background:#2b2b2b;overflow:hidden">
     <div id="left" class ="add" style = "float:left; width: 50%;">

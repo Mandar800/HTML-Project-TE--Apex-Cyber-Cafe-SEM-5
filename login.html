@@ -4,23 +4,33 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href='https://fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800'
 rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="myScript.js"></script>
 </head>
 <body bgcolor="#333">
 
-<div class="topnav">
+<div class="topnav" id="myTopnav">
    <a class="active" href="mywebsite.html">Apex Cyber</a>
   <a href="cs.html">Specifications</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact Us</a>
   <a style="float:right" href="login.html">Book Now</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+<i class="fa fa-bars"></i>
+</a>
 </div>
-<form class="box" action="login.php" method="post">
-  <h1>Login</h1>
-  <input type="text" name="un" placeholder="Username" required>
-  <input type="password" name="pass" placeholder="Password" required>
-  <input type="submit" name="" value="Log in">
-  <h5>Don't have Account? <a href="signup.html">Sign up</a></h5>
-</form>
+<section>
+<div class="" style="width:100%;overflow:hidden;">
+  <form class="box" action="login.php" method="post">
+    <h1>Login</h1>
+    <input type="text" name="un" placeholder="Username" required>
+    <input type="password" name="pass" placeholder="Password" required>
+    <input type="submit" name="" value="Log in">
+    <h5>Don't have Account? <a href="signup.html">Sign up</a></h5>
+  </form>
 </div>
+</section>
+
+
 </body>
 </html>
