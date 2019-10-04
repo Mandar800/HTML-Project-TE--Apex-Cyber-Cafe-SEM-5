@@ -23,59 +23,267 @@ $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname)
 
 
   if ($SPEC =='pc') {
-    $duplicate=mysqli_query($conn,"select * from spec where title='$pc_array[0]' date='$DATE' AND from='$TIME'");
+    $duplicate=mysqli_query($conn,"select * from spec where title='$pc_array[0]' AND datee='$DATE' AND fro='$TIME'");
     $TITLE=$pc_array[0];
     if (mysqli_num_rows($duplicate)>0){
-    	 $duplicate=mysqli_query($conn,"select * from spec where title='$pc_array[1]' date='$DATE' AND from='$TIME'");
+    	 $duplicate=mysqli_query($conn,"select * from spec where title='$pc_array[1]' datee='$DATE' AND fro='$TIME'");
        $TITLE=$pc_array[1];
        if (mysqli_num_rows($duplicate)>0){
-         $duplicate=mysqli_query($conn,"select * from spec where title='$pc_array[2]' date='$DATE' AND from='$TIME'");
+         $duplicate=mysqli_query($conn,"select * from spec where title='$pc_array[2]' datee='$DATE' AND fro='$TIME'");
          $TITLE=$pc_array[2];
-          if (mysqli_num_rows($duplicate)>0){
-            echo ' <script type="text/javascript"> alert("Time Slot Already Taken! PLease Select Another Time Slot!")
+      if (mysqli_num_rows($duplicate)>0){
+          echo ' <script type="text/javascript"> alert("Time Slot Already Taken! PLease Select Another Time Slot!")
         			window.open("book.html", "_top");
         		</script>';
+          }else {
+            // insert2
+            $TITLE=$pc_array[2];
+           $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+             if(mysqli_query($conn,$INSERT))
+             {
+               echo ' <script type="text/javascript"> alert("Booked !")
+                window.open("mywebsite.html", "_top");
+               </script>';
+
+             }
+             else{
+               echo 'failed to insert';
+               echo mysqli_error($conn);
+                 }
           }
+       }else {
+         // insert1
+         $TITLE=$pc_array[1];
+        $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+          if(mysqli_query($conn,$INSERT))
+          {
+            echo ' <script type="text/javascript"> alert("Booked !")
+             window.open("mywebsite.html", "_top");
+            </script>';
+
+          }
+          else{
+            echo 'failed to insert';
+            echo mysqli_error($conn);
+              }
        }
      }else {
-       $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
-       if(mysqli_query($conn,$INSERT))
-    {
-   	 echo ' <script type="text/javascript"> alert("Booked!")
-   		window.open("login.html", "_top");
-   	 </script>';
+       //insert0
 
-    }
-    else{
-   	 echo 'failed to insert';
-   	 echo mysqli_error($conn);
-    }
+       $TITLE=$pc_array[0];
+      $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+        if(mysqli_query($conn,$INSERT))
+        {
+          echo ' <script type="text/javascript"> alert("Booked !")
+           window.open("mywebsite.html", "_top");
+          </script>';
+
+        }
+        else{
+          echo 'failed to insert';
+          echo mysqli_error($conn);
+            }
      }
-
-    $TITLE = array_rand($pc_array);
-
-
-
-  }elseif ($SPEC =='gpc') {
+}
+elseif ($SPEC =='gpc') {
 
 
 
-    $TITLE = array_rand($Gpc_array);
+  $duplicate=mysqli_query($conn,"select * from spec where title='$Gpc_array[0]' AND datee='$DATE' AND fro='$TIME'");
+  $TITLE=$Gpc_array[0];
+  if (mysqli_num_rows($duplicate)>0){
+     $duplicate=mysqli_query($conn,"select * from spec where title='$Gpc_array[1]' datee='$DATE' AND fro='$TIME'");
+     $TITLE=$Gpc_array[1];
+     if (mysqli_num_rows($duplicate)>0){
+       $duplicate=mysqli_query($conn,"select * from spec where title='$Gpc_array[2]' datee='$DATE' AND fro='$TIME'");
+       $TITLE=$Gpc_array[2];
+    if (mysqli_num_rows($duplicate)>0){
+        echo ' <script type="text/javascript"> alert("Time Slot Already Taken! PLease Select Another Time Slot!")
+            window.open("book.html", "_top");
+          </script>';
+        }else {
+          // insert2
+          $TITLE=$Gpc_array[2];
+         $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+           if(mysqli_query($conn,$INSERT))
+           {
+             echo ' <script type="text/javascript"> alert("Booked !")
+              window.open("mywebsite.html", "_top");
+             </script>';
+
+           }
+           else{
+             echo 'failed to insert';
+             echo mysqli_error($conn);
+               }
+        }
+     }else {
+       // insert1
+       $TITLE=$Gpc_array[1];
+      $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+        if(mysqli_query($conn,$INSERT))
+        {
+          echo ' <script type="text/javascript"> alert("Booked !")
+           window.open("mywebsite.html", "_top");
+          </script>';
+
+        }
+        else{
+          echo 'failed to insert';
+          echo mysqli_error($conn);
+            }
+     }
+   }else {
+     //insert0
+
+     $TITLE=$Gpc_array[0];
+    $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+      if(mysqli_query($conn,$INSERT))
+      {
+        echo ' <script type="text/javascript"> alert("Booked !")
+         window.open("mywebsite.html", "_top");
+        </script>';
+
+      }
+      else{
+        echo 'failed to insert';
+        echo mysqli_error($conn);
+          }
+   }
 
 
 
   }elseif ($SPEC == 'vr') {
 
 
+    $duplicate=mysqli_query($conn,"select * from spec where title='$vrpc_array[0]' AND datee='$DATE' AND fro='$TIME'");
+    $TITLE=$vrpc_array[0];
+    if (mysqli_num_rows($duplicate)>0){
+       $duplicate=mysqli_query($conn,"select * from spec where title='$vrpc_array[1]' datee='$DATE' AND fro='$TIME'");
+       $TITLE=$vrpc_array[1];
+       if (mysqli_num_rows($duplicate)>0){
+         $duplicate=mysqli_query($conn,"select * from spec where title='$vrpc_array[2]' datee='$DATE' AND fro='$TIME'");
+         $TITLE=$vrpc_array[2];
+      if (mysqli_num_rows($duplicate)>0){
+          echo ' <script type="text/javascript"> alert("Time Slot Already Taken! PLease Select Another Time Slot!")
+              window.open("book.html", "_top");
+            </script>';
+          }else {
+            // insert2
+            $TITLE=$vrpc_array[2];
+           $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+             if(mysqli_query($conn,$INSERT))
+             {
+               echo ' <script type="text/javascript"> alert("Booked !")
+                window.open("mywebsite.html", "_top");
+               </script>';
 
-    $TITLE = array_rand($vrpc_array);
+             }
+             else{
+               echo 'failed to insert';
+               echo mysqli_error($conn);
+                 }
+          }
+       }else {
+         // insert1
+         $TITLE=$vrpc_array[1];
+        $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+          if(mysqli_query($conn,$INSERT))
+          {
+            echo ' <script type="text/javascript"> alert("Booked !")
+             window.open("mywebsite.html", "_top");
+            </script>';
+
+          }
+          else{
+            echo 'failed to insert';
+            echo mysqli_error($conn);
+              }
+       }
+     }else {
+       //insert0
+
+       $TITLE=$vrpc_array[0];
+      $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+        if(mysqli_query($conn,$INSERT))
+        {
+          echo ' <script type="text/javascript"> alert("Booked !")
+           window.open("mywebsite.html", "_top");
+          </script>';
+
+        }
+        else{
+          echo 'failed to insert';
+          echo mysqli_error($conn);
+            }
+     }
 
 
 
   }elseif ($SPEC == 'xbox') {
 
 
-    $TITLE = array_rand($xbox_array);
+    $duplicate=mysqli_query($conn,"select * from spec where title='$xbox_array[0]' AND datee='$DATE' AND fro='$TIME'");
+    $TITLE=$xbox_array[0];
+    if (mysqli_num_rows($duplicate)>0){
+       $duplicate=mysqli_query($conn,"select * from spec where title='$xbox_array[1]' datee='$DATE' AND fro='$TIME'");
+       $TITLE=$xbox_array[1];
+       if (mysqli_num_rows($duplicate)>0){
+         $duplicate=mysqli_query($conn,"select * from spec where title='$xbox_array[2]' datee='$DATE' AND fro='$TIME'");
+         $TITLE=$xbox_array[2];
+      if (mysqli_num_rows($duplicate)>0){
+          echo ' <script type="text/javascript"> alert("Time Slot Already Taken! PLease Select Another Time Slot!")
+              window.open("book.html", "_top");
+            </script>';
+          }else {
+            // insert2
+            $TITLE=$xbox_array[2];
+           $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+             if(mysqli_query($conn,$INSERT))
+             {
+               echo ' <script type="text/javascript"> alert("Booked !")
+                window.open("mywebsite.html", "_top");
+               </script>';
+
+             }
+             else{
+               echo 'failed to insert';
+               echo mysqli_error($conn);
+                 }
+          }
+       }else {
+         // insert1
+         $TITLE=$xbox_array[1];
+        $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+          if(mysqli_query($conn,$INSERT))
+          {
+            echo ' <script type="text/javascript"> alert("Booked !")
+             window.open("mywebsite.html", "_top");
+            </script>';
+
+          }
+          else{
+            echo 'failed to insert';
+            echo mysqli_error($conn);
+              }
+       }
+     }else {
+       //insert0
+
+       $TITLE=$xbox_array[0];
+      $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+        if(mysqli_query($conn,$INSERT))
+        {
+          echo ' <script type="text/javascript"> alert("Booked !")
+           window.open("mywebsite.html", "_top");
+          </script>';
+
+        }
+        else{
+          echo 'failed to insert';
+          echo mysqli_error($conn);
+            }
+     }
 
 
 
@@ -83,7 +291,67 @@ $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname)
 
 
 
-    $TITLE = array_rand($ps_array);
+    $duplicate=mysqli_query($conn,"select * from spec where title='$ps_array[0]' AND datee='$DATE' AND fro='$TIME'");
+    $TITLE=$ps_array[0];
+    if (mysqli_num_rows($duplicate)>0){
+       $duplicate=mysqli_query($conn,"select * from spec where title='$ps_array[1]' datee='$DATE' AND fro='$TIME'");
+       $TITLE=$ps_array[1];
+       if (mysqli_num_rows($duplicate)>0){
+         $duplicate=mysqli_query($conn,"select * from spec where title='$ps_array[2]' datee='$DATE' AND fro='$TIME'");
+         $TITLE=$ps_array[2];
+      if (mysqli_num_rows($duplicate)>0){
+          echo ' <script type="text/javascript"> alert("Time Slot Already Taken! PLease Select Another Time Slot!")
+              window.open("book.html", "_top");
+            </script>';
+          }else {
+            // insert2
+            $TITLE=$ps_array[2];
+           $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+             if(mysqli_query($conn,$INSERT))
+             {
+               echo ' <script type="text/javascript"> alert("Booked !")
+                window.open("mywebsite.html", "_top");
+               </script>';
+
+             }
+             else{
+               echo 'failed to insert';
+               echo mysqli_error($conn);
+                 }
+          }
+       }else {
+         // insert1
+         $TITLE=$ps_array[1];
+        $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+          if(mysqli_query($conn,$INSERT))
+          {
+            echo ' <script type="text/javascript"> alert("Booked !")
+             window.open("mywebsite.html", "_top");
+            </script>';
+
+          }
+          else{
+            echo 'failed to insert';
+            echo mysqli_error($conn);
+              }
+       }
+     }else {
+       //insert0
+
+       $TITLE=$ps_array[0];
+      $INSERT = "INSERT Into spec(title,un,datee,fro,till)values('".$TITLE."','".$NAME."','".$DATE."' ,'".$TIME."','".$DUR."');";
+        if(mysqli_query($conn,$INSERT))
+        {
+          echo ' <script type="text/javascript"> alert("Booked !")
+           window.open("mywebsite.html", "_top");
+          </script>';
+
+        }
+        else{
+          echo 'failed to insert';
+          echo mysqli_error($conn);
+            }
+     }
 
 
 
