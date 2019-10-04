@@ -48,9 +48,7 @@ body{
 .img {
   display: absolute;
    width: 200%;
-
-    filter: blur(2px);
-    margin: -5px -15px -10px -15px;
+   filter: blur(2px);  
  }
  .topnav .icon {
    display: none;

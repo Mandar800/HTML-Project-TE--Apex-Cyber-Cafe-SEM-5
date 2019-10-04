@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="contact.css">
@@ -20,30 +22,32 @@
   </a>
     </div>
     <div>
-  	<img class="img" src="cont.jpg" style="  display: absolute; width: 100%;filter: blur(2px);margin-bottom:-10px;z-index:-1;" >
+  	<img class="" src="cont.jpg" style=" display: absolute; width: 100%;filter: blur(2px);z-index:-1;" >
   </div>
+  <form action="contact.php" method="post" id="myform">
   <div class="contact-form">
     <h1 style="width: 532px;height: 47.8px;font-size: 54px;margin-bottom:50px;">Contact Us</h1>
     <div class="txtb">
       <label>Full Name :</label>
-      <input type="text" name="" value="" placeholder="Enter Your Name">
+      <input type="text" name="un" value="" placeholder="Enter Your Name">
     </div>
 
     <div class="txtb">
       <label>Email :</label>
-      <input type="Email" name="" value="" placeholder="Enter Your Email">
+      <input type="Email" name="email" value="" placeholder="Enter Your Email">
     </div>
 
     <div class="txtb">
       <label>Phone Number :</label>
-      <input type="text" name="" value="" placeholder="Enter Your Phone Number">
+      <input type="number" name="tel" value="" placeholder="Enter Your Phone Number">
     </div>
 
     <div class="txtb">
       <label>Message :</label>
-      <textarea></textarea>
+      <textarea name="msg" form="myform"></textarea>
     </div>
-    <a class="btn">Send</a>
+    <input type="Submit" class="btn" name="submit" value="Submit">
+  </form>
   </div>
   <section class="featuresw" style="border-top:2px solid #74b9ff;  z-index: 1;">
 <div id = "container" style = "width:100%;">
