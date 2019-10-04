@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="myScript.js"></script>
+<script src="gmap.js"></script>
   </head>
   <body>
-  	 <nav>
     <div class="topnav" id="myTopnav">
       <a  href="mywebsite.html">Apex Cyber</a>
       <a href="cs.html">Computer Specs</a>
@@ -19,7 +19,9 @@
     <i class="fa fa-bars"></i>
   </a>
     </div>
-  	<img class="img" src="cont.jpg" style="height: 1573.4px;width: 100% "width="100%" >
+    <div>
+  	<img class="img" src="cont.jpg" style="  display: absolute; width: 100%;filter: blur(2px);margin-bottom:-10px;z-index:-1;" >
+  </div>
   <div class="contact-form">
     <h1 style="width: 532px;height: 47.8px;font-size: 54px;margin-bottom:50px;">Contact Us</h1>
     <div class="txtb">
@@ -43,11 +45,14 @@
     </div>
     <a class="btn">Send</a>
   </div>
-  <section class="featuresw">
+  <section class="featuresw" style="border-top:2px solid #74b9ff;  z-index: 1;">
 <div id = "container" style = "width:100%;">
     <div id="left" class ="add" style = "float:left; width: 50%;">
       <h3>Apex Cyber Cafe</h3>
       <p>Hinduja College lane, 331, Raja Rammohan Roy Rd, Charni Road East, Opera House, Worli, Mumbai, Maharashtra 400035</p>
+      <div id="googleMap" style="width:80%;height:200px;margin-left:100px;margin-bottom:50px;"></div>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjZKup5AorD9VDD__5SyV5tLokTZ3Hn04&callback=myMap"></script>
+
     </div>
     <div id="right" class="links" style = "float:right; width: 50%;">
       <h3>Useful Links</h3>

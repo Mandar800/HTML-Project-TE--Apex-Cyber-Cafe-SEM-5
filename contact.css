@@ -47,9 +47,10 @@ body{
 
 .img {
   display: absolute;
-   width: 100%;
+   width: 200%;
+
     filter: blur(2px);
-    margin-top:0%;
+    margin: -5px -15px -10px -15px;
  }
  .topnav .icon {
    display: none;
