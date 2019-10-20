@@ -37,7 +37,9 @@ body {
 .topnav .icon {
   display: none;
 }
-
+#book{
+  float:right;
+}
 
 .img {
   display: absolute;
@@ -137,7 +139,7 @@ body {
   z-index: -1;
 }
 .mainhead2{
-  font-size:2vw;
+  font-size:1vw;
   color:white;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -375,7 +377,9 @@ body {
   .mainhead{
     font-size: 7vw;
   }
-
+  #book{
+    float: none;
+  }
   [class*="wid-"] {
     width: 100%;
   }
