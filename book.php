@@ -13,9 +13,9 @@ $xbox_array = array("xbox1", "xbox2","xbox3");
 $ps_array = array("ps1", "ps2","ps3");
 
 $host = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbname = "apex";
+$dbUsername = "id11279305_admin";
+$dbPassword = "admin";
+$dbname = "id11279305_apexcyber";
 //create connection
 $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname)
     or
@@ -42,7 +42,7 @@ $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname)
              if(mysqli_query($conn,$INSERT))
              {
                echo ' <script type="text/javascript"> alert("Booked !")
-                window.open("mywebsite.html", "_top");
+                window.open("index.html", "_top");
                </script>';
 
              }
@@ -58,7 +58,7 @@ $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname)
           if(mysqli_query($conn,$INSERT))
           {
             echo ' <script type="text/javascript"> alert("Booked !")
-             window.open("mywebsite.html", "_top");
+             window.open("index.html", "_top");
             </script>';
 
           }
@@ -75,7 +75,7 @@ $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname)
         if(mysqli_query($conn,$INSERT))
         {
           echo ' <script type="text/javascript"> alert("Booked !")
-           window.open("mywebsite.html", "_top");
+           window.open("index.html", "_top");
           </script>';
 
         }
@@ -108,7 +108,7 @@ elseif ($SPEC =='gpc') {
            if(mysqli_query($conn,$INSERT))
            {
              echo ' <script type="text/javascript"> alert("Booked !")
-              window.open("mywebsite.html", "_top");
+              window.open("index.html", "_top");
              </script>';
 
            }
@@ -124,7 +124,7 @@ elseif ($SPEC =='gpc') {
         if(mysqli_query($conn,$INSERT))
         {
           echo ' <script type="text/javascript"> alert("Booked !")
-           window.open("mywebsite.html", "_top");
+           window.open("index.html", "_top");
           </script>';
 
         }
@@ -141,7 +141,7 @@ elseif ($SPEC =='gpc') {
       if(mysqli_query($conn,$INSERT))
       {
         echo ' <script type="text/javascript"> alert("Booked !")
-         window.open("mywebsite.html", "_top");
+         window.open("index.html", "_top");
         </script>';
 
       }
@@ -175,7 +175,7 @@ elseif ($SPEC =='gpc') {
              if(mysqli_query($conn,$INSERT))
              {
                echo ' <script type="text/javascript"> alert("Booked !")
-                window.open("mywebsite.html", "_top");
+                window.open("index.html", "_top");
                </script>';
 
              }
@@ -191,7 +191,7 @@ elseif ($SPEC =='gpc') {
           if(mysqli_query($conn,$INSERT))
           {
             echo ' <script type="text/javascript"> alert("Booked !")
-             window.open("mywebsite.html", "_top");
+             window.open("index.html", "_top");
             </script>';
 
           }
@@ -208,7 +208,7 @@ elseif ($SPEC =='gpc') {
         if(mysqli_query($conn,$INSERT))
         {
           echo ' <script type="text/javascript"> alert("Booked !")
-           window.open("mywebsite.html", "_top");
+           window.open("index.html", "_top");
           </script>';
 
         }
@@ -242,7 +242,7 @@ elseif ($SPEC =='gpc') {
              if(mysqli_query($conn,$INSERT))
              {
                echo ' <script type="text/javascript"> alert("Booked !")
-                window.open("mywebsite.html", "_top");
+                window.open("index.html", "_top");
                </script>';
 
              }
@@ -258,7 +258,7 @@ elseif ($SPEC =='gpc') {
           if(mysqli_query($conn,$INSERT))
           {
             echo ' <script type="text/javascript"> alert("Booked !")
-             window.open("mywebsite.html", "_top");
+             window.open("index.html", "_top");
             </script>';
 
           }
@@ -275,7 +275,7 @@ elseif ($SPEC =='gpc') {
         if(mysqli_query($conn,$INSERT))
         {
           echo ' <script type="text/javascript"> alert("Booked !")
-           window.open("mywebsite.html", "_top");
+           window.open("index.html", "_top");
           </script>';
 
         }
@@ -310,7 +310,7 @@ elseif ($SPEC =='gpc') {
              if(mysqli_query($conn,$INSERT))
              {
                echo ' <script type="text/javascript"> alert("Booked !")
-                window.open("mywebsite.html", "_top");
+                window.open("index.html", "_top");
                </script>';
 
              }
@@ -326,7 +326,7 @@ elseif ($SPEC =='gpc') {
           if(mysqli_query($conn,$INSERT))
           {
             echo ' <script type="text/javascript"> alert("Booked !")
-             window.open("mywebsite.html", "_top");
+             window.open("index.html", "_top");
             </script>';
 
           }
@@ -343,7 +343,7 @@ elseif ($SPEC =='gpc') {
         if(mysqli_query($conn,$INSERT))
         {
           echo ' <script type="text/javascript"> alert("Booked !")
-           window.open("mywebsite.html", "_top");
+           window.open("index.html", "_top");
           </script>';
 
         }

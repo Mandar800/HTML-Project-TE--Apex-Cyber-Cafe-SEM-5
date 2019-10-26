@@ -294,6 +294,7 @@ body {
   font-size: 20px;
   margin-left: 15%;
   margin-top: 0%;
+  line-height: 1.8;
 }
 .spec{
   width:100%;
@@ -349,6 +350,33 @@ body {
   color:#2b2b2b;
   margin-top:35%;
 }
+.parallax {
+  /* The image used */
+  background-image: url("about3.jpeg");
+  z-index: -1;
+  top: -100px;
+  bottom: 100px;
+  margin: -10px px -100px -10px;
+  /* Set a specific height */
+  min-height: 300px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about{
+  background:#ffffff;
+  text-align:justify;
+  padding:50px 100px 50px 100px;
+  line-height:2;
+}
+
+
+
+
+
 @media screen and (max-width: 800px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -375,7 +403,10 @@ body {
     margin: -10px -50px -10px -80px;
   }
   .mainhead{
-    font-size: 7vw;
+    font-size: 10vw;
+  }
+  .mainhead2{
+    font-size: 2vw;
   }
   #book{
     float: none;
@@ -498,5 +529,10 @@ body {
     margin-top: 20px;
     text-align: center;
     margin-right: : 50px;
+  }
+  .about{
+    padding-left: 50px;
+    padding-right: 50px;
+
   }
 }
